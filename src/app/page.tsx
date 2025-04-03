@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import Link from "next/link";
+import profiles from "../../profiles.json"; // Importing profiles from JSON file
 
 // Fix marker icon issue
 const customIcon = new L.Icon({
@@ -18,50 +18,9 @@ const customIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-const profiles = [
-  {
-    id: 1,
-    name: "Jane Smith",
-    photo: "/profile.jpeg",
-    description: "Software Engineer with 5 years of experience in React development",
-    address: {
-      street: "123 Tech Avenue",
-      city: "San Francisco",
-      state: "CA",
-      zip: "94105",
-      lat: 37.7749,
-      lng: -122.4194
-    },
-    contact: {
-      email: "jane.smith@example.com",
-      phone: "(415) 555-1234"
-    },
-    interests: ["Hiking", "Photography", "Web Development"]
-  },
-  {
-    id: 2,
-    name: "John Doe",
-    photo: "/profile.jpeg",
-    description: "Marketing Expert at ABC Corp.",
-    address: {
-      street: "456 Market Street",
-      city: "Los Angeles",
-      state: "CA",
-      zip: "90001",
-      lat: 34.0522,
-      lng: -118.2437
-    },
-    contact: {
-      email: "john.doe@example.com",
-      phone: "(323) 555-5678"
-    },
-    interests: ["Traveling", "Music", "Digital Marketing"]
-  }
-];
-
 const ProfileList = () => {
   const [selectedProfile, setSelectedProfile] = useState<typeof profiles[0] | null>(null);
-  const router = useRouter();
+  
 
   return (
     <div className="flex h-screen bg-gray-900 text-white">
@@ -87,12 +46,8 @@ const ProfileList = () => {
                 <p className="text-gray-400">{profile.description}</p>
                 <p className="text-gray-500 mt-2">{profile.address.city}, {profile.address.state}</p>
               </div>
-              <button
-                className="bg-blue-600 px-3 py-2 rounded-md text-white hover:bg-blue-700 cursor-po"
-              >
-                <Link href={`/profile/${profile.id}`} >
-                  View Summary
-                </Link>
+              <button className="bg-blue-600 px-3 py-2 rounded-md text-white hover:bg-blue-700 cursor-pointer">
+                <Link href={`/profile/${profile.id}`}>View Summary</Link>
               </button>
             </div>
           ))}
@@ -103,12 +58,10 @@ const ProfileList = () => {
       <div className="w-1/2 h-full">
         <MapContainer
           center={selectedProfile ? [selectedProfile.address.lat, selectedProfile.address.lng] : [37.7749, -122.4194]}
-          zoom={selectedProfile ? 10 : 5}
+          zoom={selectedProfile ? 10 : 3}
           className="h-full w-full"
         >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {profiles.map((profile) => (
             <Marker key={profile.id} position={[profile.address.lat, profile.address.lng]} icon={customIcon}>
               <Popup>

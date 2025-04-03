@@ -5,47 +5,8 @@ import Image from "next/image";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import profiles from "../../../../profiles.json"
 
-const profiles = [
-  {
-    id: 1,
-    name: "Jane Smith",
-    photo: "/profile.jpeg",
-    description: "Software Engineer with 5 years of experience in React development",
-    address: {
-      street: "123 Tech Avenue",
-      city: "San Francisco",
-      state: "CA",
-      zip: "94105",
-      lat: 37.7749,
-      lng: -122.4194
-    },
-    contact: {
-      email: "jane.smith@example.com",
-      phone: "(415) 555-1234"
-    },
-    interests: ["Hiking", "Photography", "Web Development"]
-  },
-  {
-    id: 2,
-    name: "John Doe",
-    photo: "/profile.jpeg",
-    description: "Marketing Expert at ABC Corp.",
-    address: {
-      street: "456 Market Street",
-      city: "Los Angeles",
-      state: "CA",
-      zip: "90001",
-      lat: 34.0522,
-      lng: -118.2437
-    },
-    contact: {
-      email: "john.doe@example.com",
-      phone: "(323) 555-5678"
-    },
-    interests: ["Traveling", "Music", "Digital Marketing"]
-  }
-];
 
 const customIcon = new L.Icon({
   iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
