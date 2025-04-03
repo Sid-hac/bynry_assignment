@@ -28,10 +28,10 @@ export async function POST(req: Request) {
   }
 }
 
-// Define the Profile interface
+
 interface Profile {
   id: number;
-  [key: string]: unknown; // Adjust this to match the structure of your profiles
+  [key: string]: unknown;
 }
 
 export async function PUT(req: Request) {
