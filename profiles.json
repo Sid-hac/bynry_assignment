@@ -1,59 +1,71 @@
 [
-    {
-      "id": 1,
-      "name": "Jane Smith",
-      "photo": "/profile.jpeg",
-      "description": "Software Engineer with 5 years of experience in React development",
-      "address": {
-        "street": "123 Tech Avenue",
-        "city": "San Francisco",
-        "state": "CA",
-        "zip": "94105",
-        "lat": 37.7749,
-        "lng": -122.4194
-      },
-      "contact": {
-        "email": "jane.smith@example.com",
-        "phone": "(415) 555-1234"
-      },
-      "interests": ["Hiking", "Photography", "Web Development"]
+  {
+    "id": 2,
+    "name": "John Doe",
+    "photo": "/profile4.jpeg",
+    "description": "Marketing Expert at ABC Corp.",
+    "address": {
+      "street": "456 Market Street",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90001",
+      "lat": 34.0522,
+      "lng": -118.2437
     },
-    {
-      "id": 2,
-      "name": "John Doe",
-      "photo": "/profile4.jpeg",
-      "description": "Marketing Expert at ABC Corp.",
-      "address": {
-        "street": "456 Market Street",
-        "city": "Los Angeles",
-        "state": "CA",
-        "zip": "90001",
-        "lat": 34.0522,
-        "lng": -118.2437
-      },
-      "contact": {
-        "email": "john.doe@example.com",
-        "phone": "(323) 555-5678"
-      },
-      "interests": ["Traveling", "Music", "Digital Marketing"]
+    "contact": {
+      "email": "john.doe@example.com",
+      "phone": "(323) 555-5678"
     },
-    {
-      "id": 3,
-      "name": "Emily Davis",
-      "photo": "/profile3.jpeg",
-      "description": "Data Scientist specializing in AI and Machine Learning",
-      "address": {
-        "street": "789 AI Road",
-        "city": "New York",
-        "state": "NY",
-        "zip": "10001",
-        "lat": 40.7128,
-        "lng": -74.0060
-      },
-      "contact": {
-        "email": "emily.davis@example.com",
-        "phone": "(212) 555-7890"
-      },
-      "interests": ["Machine Learning", "Data Science", "Reading"]
-    }
-  ]
+    "interests": [
+      "Traveling",
+      "Music",
+      "Digital Marketing"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Emily Davis",
+    "photo": "/profile3.jpeg",
+    "description": "Data Scientist specializing in AI and Machine Learning",
+    "address": {
+      "street": "789 AI Road",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10001",
+      "lat": 40.7128,
+      "lng": -74.006
+    },
+    "contact": {
+      "email": "emily.davis@example.com",
+      "phone": "(212) 555-7890"
+    },
+    "interests": [
+      "Machine Learning",
+      "Data Science",
+      "Reading"
+    ]
+  },
+  {
+    "id": 91.3033462387345,
+    "name": "sidd",
+    "photo": "/profile.jpeg",
+    "description": "",
+    "address": {
+      "street": "",
+      "city": "satara",
+      "state": "",
+      "zip": "",
+      "lat": 17.286501,
+      "lng": 74.181427
+    },
+    "contact": {
+      "email": "hey@gmail.com",
+      "phone": "1234567890"
+    },
+    "interests": [
+      "Machine Learning",
+      "Data Science",
+      "Reading"
+    ]
+  }
+]

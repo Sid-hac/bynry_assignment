@@ -26,7 +26,10 @@ const ProfileList = () => {
     <div className="flex h-screen bg-gray-900 text-white">
       {/* Left Panel - Profiles */}
       <div className="w-1/2 p-6 overflow-y-auto">
+      <div className="flex justify-between items-center" >
         <h1 className="text-2xl font-bold mb-4">Profiles</h1>
+        <Link href="/dashboard" className="text-2xl font-bold mb-4" > Dashboard</Link>
+      </div>
         <div className="space-y-4">
           {profiles.map((profile) => (
             <div
